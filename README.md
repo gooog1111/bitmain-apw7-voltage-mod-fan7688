@@ -1,7 +1,11 @@
 Bitmain APW7 Voltage Mod (FAN7688, 4-MOSFET)
 
-""Stars" (https://img.shields.io/github/stars/gooog1111/bitmain-apw7-voltage-mod-fan7688?style=social)" (https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/stargazers)
-""Views" (https://hits.sh/github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688.svg?style=flat-square)" (https://hits.sh/github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/)
+""Stars" [![Stars](https://img.shields.io/github/stars/gooog1111/bitmain-apw7-voltage-mod-fan7688?style=social)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
+![views](https://komarev.com/ghpvc/?username=gooog1111&repo=bitmain-apw7-voltage-mod-fan7688)
+
+---
+
+![APW7 board](https://raw.githubusercontent.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/main/20260407_112911.jpg)
 
 ---
 
