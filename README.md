@@ -1,24 +1,46 @@
-Bitmain APW7 Voltage Mod (FAN7688, 4-MOSFET Version)
+Bitmain APW7 Voltage Mod (FAN7688, 4-MOSFET)
 
-EN
+""Stars" (https://img.shields.io/github/stars/gooog1111/bitmain-apw7-voltage-mod-fan7688?style=social)" (https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/stargazers)
+""Views" (https://hits.sh/github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688.svg?style=flat-square)" (https://hits.sh/github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/)
+
+---
+
+EN | RU
+
+- "English" (#english)
+- "Русский" (#русский)
+
+---
+
+English
 
 Hardware
 
 - PSU: Bitmain APW7
-- Version: 4 MOSFET secondary (simplified variant)
-- Controller: FAN7688
+- Revision: 4-MOSFET secondary rectifier version
+- Controller: FAN7688 (SOP-16)
 - Pin 4: FB (feedback input)
+
+«This information applies to the APW7 4-MOSFET revision shown in the photo and not match other APW7 revisions.»
 
 ---
 
 Purpose
 
-Increase output voltage from ~12.3V to ~14–15V.
+Increase output voltage from ~12.3V to ~14–15V (car audio use).
+
+---
+
+Board Photo
+
+"APW7 board" (20260407_112911.jpg)
+
+Feedback divider R86 / R87 identified
 
 ---
 
 Original Feedback Divider
-```
+
 +12V
   |
  R86 = 8.2k (822)
@@ -28,8 +50,8 @@ Original Feedback Divider
  R87 = 2.0k (30B)
   |
  GND
-```
-Output: ~12.3V
+
+Measured output: ~12.3V
 
 ---
 
@@ -42,13 +64,13 @@ Replace:
 ---
 
 Result
-```
-R86   | Output
-8.2k  | ~12.3V
-9.1k  | ~13.3V
-10k   | ~14.6V
-10.5k | ~15.0V
-```
+
+R86| Output
+8.2k| ~12.3V (measured)
+9.1k| ~13.3V (calculated)
+10k| ~14.6V (measured)
+10.5k| ~15.0V (calculated)
+
 ---
 
 Formula
@@ -67,32 +89,41 @@ Verified Connections
 Notes
 
 - Do not modify R87
-- Step-by-step voltage increase
-- Check capacitor rating (typically 16V)
+- Increase voltage step-by-step
+- Check output capacitors (typically 16V)
+- Higher voltage increases stress on components
 
 ---
 
-![APW7 board](20260407_112911.jpg)
-
-RU
+Русский
 
 Оборудование
 
 - БП: Bitmain APW7
-- Версия: 4 MOSFET (упрощённая вторичка)
-- Контроллер: FAN7688
+- Ревизия: вторичная часть на 4 MOSFET
+- Контроллер: FAN7688 (SOP-16)
 - Вывод 4: FB (обратная связь)
+
+«Данные относятся к показанной на фото ревизии APW7 на 4 MOSFET и не совпадают с другими версиями.»
 
 ---
 
 Назначение
 
-Повышение напряжения с ~12.3В до ~14–15В.
+Повышение выходного напряжения с ~12.3В до ~14–15В (автозвук).
+
+---
+
+Фото платы
+
+"APW7 board" (20260407_112911.jpg)
+
+Определён делитель обратной связи R86 / R87
 
 ---
 
 Штатный делитель
-```
+
 +12V
   |
  R86 = 8.2k (822)
@@ -102,8 +133,8 @@ RU
  R87 = 2.0k (30B)
   |
  GND
-```
-Выход: ~12.3 В
+
+Измерено: ~12.3 В
 
 ---
 
@@ -116,13 +147,13 @@ RU
 ---
 
 Результат
-```
-R86   | Напряжение
-8.2k  | ~12.3 В
-9.1k  | ~13.3 В
-10k   | ~14.6 В
-10.5k | ~15.0 В
-```
+
+R86| Напряжение
+8.2k| ~12.3 В (измерено)
+9.1k| ~13.3 В (расчёт)
+10k| ~14.6 В (измерено)
+10.5k| ~15.0 В (расчёт)
+
 ---
 
 Формула
@@ -143,5 +174,6 @@ Vout = 2.4 × (1 + R86 / R87)
 - R87 не изменять
 - Повышать напряжение поэтапно
 - Проверить конденсаторы (обычно 16 В)
+- При увеличении напряжения растёт нагрузка на компоненты
 
 ---
