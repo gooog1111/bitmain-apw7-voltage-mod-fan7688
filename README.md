@@ -11,8 +11,8 @@ Bitmain APW7 Voltage Mod (FAN7688, 4-MOSFET)
 
 EN | RU
 
-- "English" (#english)
-- "Русский" (#русский)
+- [English](#english)
+- [Русский](#русский)
 
 ---
 
