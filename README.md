@@ -42,7 +42,8 @@ Feedback divider R86 / R87 identified
 ---
 
 Original Feedback Divider
-'''
+
+```
 +12V
   |
  R86 = 8.2k (822)
@@ -52,7 +53,8 @@ Original Feedback Divider
  R87 = 2.0k (30B)
   |
  GND
-'''
+```
+
 Measured output: ~12.3V
 
 ---
@@ -66,13 +68,13 @@ Replace:
 ---
 
 Result
-
-R86| Output
-8.2k| ~12.3V (measured)
-9.1k| ~13.3V (calculated)
-10k| ~14.6V (measured)
-10.5k| ~15.0V (calculated)
-
+```
+R86   | Output
+8.2k  | ~12.3V (measured)
+9.1k  | ~13.3V (calculated)
+10k   | ~14.6V (measured)
+10.5k | ~15.0V (calculated)
+```
 ---
 
 Formula
@@ -125,7 +127,7 @@ Notes
 ---
 
 Штатный делитель
-
+```
 +12V
   |
  R86 = 8.2k (822)
@@ -135,7 +137,7 @@ Notes
  R87 = 2.0k (30B)
   |
  GND
-
+```
 Измерено: ~12.3 В
 
 ---
@@ -149,13 +151,13 @@ Notes
 ---
 
 Результат
-
-R86| Напряжение
-8.2k| ~12.3 В (измерено)
-9.1k| ~13.3 В (расчёт)
-10k| ~14.6 В (измерено)
-10.5k| ~15.0 В (расчёт)
-
+```
+R86   | Напряжение
+8.2k  | ~12.3 В (измерено)
+9.1k  | ~13.3 В (расчёт)
+10k   | ~14.6 В (измерено)
+10.5k | ~15.0 В (расчёт)
+```
 ---
 
 Формула
