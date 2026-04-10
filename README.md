@@ -42,7 +42,7 @@ Feedback divider R86 / R87 identified
 ---
 
 Original Feedback Divider
-
+'''
 +12V
   |
  R86 = 8.2k (822)
@@ -52,7 +52,7 @@ Original Feedback Divider
  R87 = 2.0k (30B)
   |
  GND
-
+'''
 Measured output: ~12.3V
 
 ---
