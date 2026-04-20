@@ -29,7 +29,7 @@ Hardware
 
 Purpose
 
-Increase output voltage from ~12.3V to ~14–15V (car audio use).
+Increase output voltage from ~12.3V to ~13–14V (car audio use).
 
 ---
 
@@ -72,8 +72,7 @@ Result
 R86   | Output
 8.2k  | ~12.3V (measured)
 9.1k  | ~13.3V (calculated)
-10k   | ~14.6V (measured)
-10.5k | ~15.0V (calculated)
+10k   | ~14.6V (not work)
 ```
 ---
 
@@ -114,7 +113,7 @@ Notes
 
 Назначение
 
-Повышение выходного напряжения с ~12.3В до ~14–15В (автозвук).
+Повышение выходного напряжения с ~12.3В до ~13–14В (автозвук).
 
 ---
 
@@ -155,8 +154,7 @@ Notes
 R86   | Напряжение
 8.2k  | ~12.3 В (измерено)
 9.1k  | ~13.3 В (расчёт)
-10k   | ~14.6 В (измерено)
-10.5k | ~15.0 В (расчёт)
+10k   | ~14.6 В (не работает)
 ```
 ---
 
