@@ -35,7 +35,7 @@ Increase output voltage from ~12.3V to ~13–14V (car audio use).
 
 Board Photo
 
-"APW7 board"
+![APW7 board](https://raw.githubusercontent.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/main/Min.jpg)
 
 Feedback divider R86 / R87 identified
 
@@ -119,7 +119,7 @@ Notes
 
 Фото платы
 
-"APW7 board"
+![APW7 board](https://raw.githubusercontent.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/main/Min.jpg)
 
 Определён делитель обратной связи R86 / R87
 
