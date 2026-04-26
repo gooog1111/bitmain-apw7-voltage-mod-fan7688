@@ -37,6 +37,7 @@ Increase output voltage from **~12.3 V up to ~14.0 V**.
 
 ### Original Feedback Divider
 
+```
 +12V
   |
  R86 = 8.2k
@@ -46,7 +47,7 @@ Increase output voltage from **~12.3 V up to ~14.0 V**.
  R87 = 2.0k
   |
  GND
-
+```
 Measured: **~12.3 V**
 
 ---
@@ -61,7 +62,7 @@ Vref ≈ 2.412 V
 ---
 
 ### Calculated Values
-
+```
 | R86 | Output |
 |---:|---:|
 | 8.2k | ~12.3 V |
@@ -71,7 +72,7 @@ Vref ≈ 2.412 V
 | 9.6k | ~14.0 V |
 | 9.76k | ~14.2 V |
 | 10k | ~14.47 V (protection) |
-
+```
 ---
 
 ### Voltage Limits
@@ -125,14 +126,14 @@ R86 = 8.2k + 2k trimmer
 ---
 
 ### Practical Range
-
+```
 | Total R86 | Output |
 |---:|---:|
 | 8.2k | 12.3 V |
 | 9.1k | 13.3–13.4 V |
 | 9.5–9.6k | 13.9–14.0 V |
 | >9.7k | Protection |
-
+```
 ---
 
 ### Important Notes
@@ -183,7 +184,7 @@ Vref ≈ 2.412 В
 ---
 
 ### Расчёт
-
+```
 | R86 | Напряжение |
 |---:|---:|
 | 8.2k | ~12.3 В |
@@ -191,7 +192,7 @@ Vref ≈ 2.412 В
 | 9.53k | ~13.9 В |
 | 9.6k | ~14.0 В |
 | 10k | ~14.47 В (защита) |
-
+```
 ---
 
 ### Пределы
