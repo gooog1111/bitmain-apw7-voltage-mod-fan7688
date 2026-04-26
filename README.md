@@ -7,6 +7,8 @@
 
 ![APW7 board](https://raw.githubusercontent.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/main/Full.jpg)
 
+![APW7 board min](https://raw.githubusercontent.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/main/Min.jpg)
+
 ---
 
 - [English](#english)
