@@ -1,5 +1,5 @@
 <!-- LANG_START -->
-🇬🇧 [English version](README.en.md)
+🇷🇺 [Русская версия](README.md)
 <!-- LANG_END -->
 
 <div align="center">
@@ -64,20 +64,20 @@
 </p>
 
 <details open>
-<summary><b>Открытые issues</b></summary>
+<summary><b>Open issues</b></summary>
 
 
 <p align="center">
-  <b>Открытых issues нет.</b><br>
-  <sub>Служебный issue <code>views-counter</code> скрыт из списка.</sub>
+  <b>No open issues.</b><br>
+  <sub>The service issue <code>views-counter</code> is hidden from the list.</sub>
 </p>
 
 
 </details>
 
 <p>
-  <a href="https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/issues/new/choose">Создать issue</a> ·
-  <a href="https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/issues">Все issues</a>
+  <a href="https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/issues/new/choose">Create new issue</a> ·
+  <a href="https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/issues">All issues</a>
 </p>
 
 <!-- ISSUES_END -->
@@ -100,7 +100,7 @@
 
 ## English
 
-### Hardware
+## #Hardware
 
 - PSU: Bitmain APW7
 - Revision: 4-MOSFET secondary rectifier version
@@ -111,13 +111,13 @@
 
 ---
 
-### Purpose
+## #Purpose
 
 Increase output voltage from **~12.3 V up to ~14.0 V**.
 
 ---
 
-### Original Feedback Divider
+## #Original Feedback Divider
 
 ```
 +12V
@@ -134,7 +134,7 @@ Measured: **~12.3 V**
 
 ---
 
-### Formula
+## #Formula
 
 Vout = Vref × (1 + R86 / R87)
 
@@ -143,7 +143,7 @@ Vref ≈ 2.412 V
 
 ---
 
-### Calculated Values
+## # Calculated Values
 ```
 | R86   | Output  |
 | 8.2k  | ~12.3 V |
@@ -154,7 +154,7 @@ Vref ≈ 2.412 V
 ```
 ---
 
-### Voltage Limits
+## #Voltage Limits
 
 - Minimum: **12.3 V**
 - Maximum stable: **13.9–14.0 V**
@@ -162,7 +162,7 @@ Vref ≈ 2.412 V
 
 ---
 
-### Fixed Resistor Mod
+## #Fixed Resistor Mod
 
 Replace:
 
@@ -178,25 +178,25 @@ Recommended:
 
 ## Adjustable Mod (Trimmer)
 
-### Wiring
+## # Wiring
 
 ![Wiring](wiring.jpg)
 
 - Red — +12V
-- Yellow — GND
-- Blue — FB (pin 4 FAN7688)
+-Yellow—GND
+- Blue - FB (pin 4 FAN7688)
 
 ---
 
-### Implementation
+## # Implementation
 
 R86 = 8.2k + 2k trimmer
 
 ---
 
-### Real Behavior (important)
+## # Real Behavior (important)
 
-- Decreasing resistance → **no effect (~12.3 V stays)**
+- Deccreasing resistance → **no effect (~12.3 V stays)**
 - Increasing resistance:
   - voltage rises normally
   - stable up to **13.9–14.0 V**
@@ -204,7 +204,7 @@ R86 = 8.2k + 2k trimmer
 
 ---
 
-### Practical Range
+## # Practical Range
 ```
 | Total R86.    | Output |
 | 8.2k          | 12.3 V |
@@ -214,7 +214,7 @@ R86 = 8.2k + 2k trimmer
 ```
 ---
 
-### Important Notes
+## # Important Notes
 
 - Regulation works **only upward**
 - Hard OVP threshold (~14 V)
@@ -222,29 +222,29 @@ R86 = 8.2k + 2k trimmer
 - Output capacitors are often **16V rated**
 - Higher voltage increases stress on:
   - rectifiers
-  - capacitors
+  -capacitors
   - transformer secondary
 
 ---
 
-## Русский
+## Russian
 
-### Оборудование
+## # Equipment
 
-- БП: Bitmain APW7
-- Ревизия: 4 MOSFET
-- Контроллер: FAN7688
-- 4 ножка — FB
-
----
-
-### Назначение
-
-Повышение напряжения с **~12.3 В до ~14.0 В**
+- PSU: Bitmain APW7
+- Revision: 4 MOSFETs
+- Controller: FAN7688
+- 4 legs - FB
 
 ---
 
-### Штатный делитель
+## # Purpose
+
+Increasing voltage from **~12.3 V to ~14.0 V**
+
+---
+
+## # Regular divider
 
 ```
 +12V
@@ -258,19 +258,19 @@ R86 = 8.2k + 2k trimmer
  GND
 ```
 
-Выход: **~12.3 В**
+Output: **~12.3 V**
 
 ---
 
-### Формула
+## # Formula
 
 Vout = Vref × (1 + R86 / R87)
 
-Vref ≈ 2.412 В
+Vref ≈ 2.412 V
 
 ---
 
-### Расчёт
+## # Calculation
 ```
 | R86   | Напряжение |
 | 8.2k  | ~12.3 В    |
@@ -280,42 +280,42 @@ Vref ≈ 2.412 В
 ```
 ---
 
-### Пределы
+## # Limits
 
-- Минимум: 12.3 В
-- Максимум: 13.9–14.0 В
-- Дальше → защита
+- Minimum: 12.3 V
+- Maximum: 13.9–14.0 V
+- Next → protection
 
 ---
 
-## Регулируемый вариант
+## Adjustable option
 
-### Подключение
+## # Connection
 
 ![Подключение](wiring.jpg)
 
-- Красный — 12V
-- Жёлтый — GND
-- Синий — FB
+- Red - 12V
+- Yellow - GND
+- Blue – FB
 
 ---
 
-### Реализация
+## # Implementation
 
-8.2k + переменный резистор 2k
-
----
-
-### Поведение
-
-- Вниз не регулируется
-- Вверх до 13.9–14.0 В
-- Дальше защита
+8.2k + 2k variable resistor
 
 ---
 
-### Вывод
+## # Behavior
 
-- Регулировка только вверх
-- Жёсткий порог защиты
-- Рабочий максимум ≈ 14 В
+- Down is not adjustable
+- Up to 13.9–14.0 V
+- Further protection
+
+---
+
+## # Conclusion
+
+- Adjustment only up
+- Hard protection threshold
+- Operating maximum ≈ 14 V
