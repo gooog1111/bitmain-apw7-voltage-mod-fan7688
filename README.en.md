@@ -13,12 +13,12 @@
 
 
 <!-- STATS_START -->
-<!-- auto-updated by GitHub Actions · 2026-07-10 11:00 UTC -->
+<!-- auto-updated by GitHub Actions · 2026-07-10 12:00 UTC -->
 
-[![Views local](https://img.shields.io/badge/Views_local-283-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
-[![Views GitHub](https://img.shields.io/badge/Views_GitHub-0-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
-[![Unique visitors](https://img.shields.io/badge/Unique-0-blue?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
-[![Clones](https://img.shields.io/badge/Clones-1968-purple?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
+[![Views local](https://img.shields.io/badge/Views_local-284-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
+[![Views GitHub](https://img.shields.io/badge/Views_GitHub-1-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
+[![Unique visitors](https://img.shields.io/badge/Unique-1-blue?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
+[![Clones](https://img.shields.io/badge/Clones-2115-purple?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
 [![Stars](https://img.shields.io/badge/Stars-0-yellow?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/stargazers)
 [![Forks](https://img.shields.io/badge/Forks-0-green?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/network/members)
 [![Downloads latest release](https://img.shields.io/badge/Downloads_latest_release-0-brightgreen?style=for-the-badge)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/releases/latest)
@@ -50,7 +50,7 @@
 
 
 <!-- ISSUES_START -->
-<!-- auto-updated by GitHub Actions · 2026-07-10 11:00 UTC -->
+<!-- auto-updated by GitHub Actions · 2026-07-10 12:00 UTC -->
 
 ## Issues
 
@@ -100,7 +100,7 @@
 
 ## English
 
-## #Hardware
+## # Hardware
 
 - PSU: Bitmain APW7
 - Revision: 4-MOSFET secondary rectifier version
@@ -111,13 +111,13 @@
 
 ---
 
-## #Purpose
+## # Purpose
 
 Increase output voltage from **~12.3 V up to ~14.0 V**.
 
 ---
 
-## #Original Feedback Divider
+## # Original Feedback Divider
 
 ```
 +12V
@@ -134,7 +134,7 @@ Measured: **~12.3 V**
 
 ---
 
-## #Formula
+## # Formula
 
 Vout = Vref × (1 + R86 / R87)
 
@@ -154,7 +154,7 @@ Vref ≈ 2.412 V
 ```
 ---
 
-## #Voltage Limits
+## # Voltage Limits
 
 - Minimum: **12.3 V**
 - Maximum stable: **13.9–14.0 V**
@@ -162,7 +162,7 @@ Vref ≈ 2.412 V
 
 ---
 
-## #Fixed Resistor Mod
+## # Fixed Resistor Mod
 
 Replace:
 
@@ -183,8 +183,8 @@ Recommended:
 ![Wiring](wiring.jpg)
 
 - Red — +12V
--Yellow—GND
-- Blue - FB (pin 4 FAN7688)
+- Yellow — GND
+- Blue — FB (pin 4 FAN7688)
 
 ---
 
@@ -196,7 +196,7 @@ R86 = 8.2k + 2k trimmer
 
 ## # Real Behavior (important)
 
-- Deccreasing resistance → **no effect (~12.3 V stays)**
+- Decreasing resistance → **no effect (~12.3 V stays)**
 - Increasing resistance:
   - voltage rises normally
   - stable up to **13.9–14.0 V**
@@ -222,29 +222,29 @@ R86 = 8.2k + 2k trimmer
 - Output capacitors are often **16V rated**
 - Higher voltage increases stress on:
   - rectifiers
-  -capacitors
+  - capacitors
   - transformer secondary
 
 ---
 
-## Russian
+## Русский
 
-## # Equipment
+## # Оборудование
 
-- PSU: Bitmain APW7
-- Revision: 4 MOSFETs
-- Controller: FAN7688
-- 4 legs - FB
-
----
-
-## # Purpose
-
-Increasing voltage from **~12.3 V to ~14.0 V**
+- БП: Bitmain APW7
+- Ревизия: 4 MOSFET
+- Контроллер: FAN7688
+- 4 ножка — FB
 
 ---
 
-## # Regular divider
+## # Назначение
+
+Повышение напряжения с **~12.3 В до ~14.0 В**
+
+---
+
+## # Штатный делитель
 
 ```
 +12V
@@ -258,19 +258,19 @@ Increasing voltage from **~12.3 V to ~14.0 V**
  GND
 ```
 
-Output: **~12.3 V**
+Выход: **~12.3 В**
 
 ---
 
-## # Formula
+## # Формула
 
 Vout = Vref × (1 + R86 / R87)
 
-Vref ≈ 2.412 V
+Vref ≈ 2.412 В
 
 ---
 
-## # Calculation
+## # Расчёт
 ```
 | R86   | Напряжение |
 | 8.2k  | ~12.3 В    |
@@ -280,42 +280,42 @@ Vref ≈ 2.412 V
 ```
 ---
 
-## # Limits
+## # Пределы
 
-- Minimum: 12.3 V
-- Maximum: 13.9–14.0 V
-- Next → protection
+- Минимум: 12.3 В
+- Максимум: 13.9–14.0 В
+- Дальше → защита
 
 ---
 
-## Adjustable option
+## Регулируемый вариант
 
-## # Connection
+## # Подключение
 
 ![Подключение](wiring.jpg)
 
-- Red - 12V
-- Yellow - GND
-- Blue – FB
+- Красный — 12V
+- Жёлтый — GND
+- Синий — FB
 
 ---
 
-## # Implementation
+## # Реализация
 
-8.2k + 2k variable resistor
-
----
-
-## # Behavior
-
-- Down is not adjustable
-- Up to 13.9–14.0 V
-- Further protection
+8.2k + переменный резистор 2k
 
 ---
 
-## # Conclusion
+## # Поведение
 
-- Adjustment only up
-- Hard protection threshold
-- Operating maximum ≈ 14 V
+- Вниз не регулируется
+- Вверх до 13.9–14.0 В
+- Дальше защита
+
+---
+
+## # Вывод
+
+- Регулировка только вверх
+- Жёсткий порог защиты
+- Рабочий максимум ≈ 14 В
