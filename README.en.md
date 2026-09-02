@@ -2,23 +2,13 @@
 🇷🇺 [Русская версия](README.md)
 <!-- LANG_END -->
 
-<div align="center">
-
-<img src="resources/header.svg" alt="Bitmain APW7 Voltage Mod" width="900"/>
-
-</div>
-
-
-
-
-
 <!-- STATS_START -->
-<!-- auto-updated by GitHub Actions · 2026-07-10 15:44 UTC -->
+<!-- auto-updated by GitHub Actions · 2026-09-02 19:18 UTC -->
 
-[![Views local](https://img.shields.io/badge/Views_local-288-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
+[![Views local](https://img.shields.io/badge/Views_local-289-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
 [![Views GitHub](https://img.shields.io/badge/Views_GitHub-1-ff6900?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
 [![Unique visitors](https://img.shields.io/badge/Unique-1-blue?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
-[![Clones](https://img.shields.io/badge/Clones-2115-purple?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
+[![Clones](https://img.shields.io/badge/Clones-10-purple?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688)
 [![Stars](https://img.shields.io/badge/Stars-0-yellow?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/stargazers)
 [![Forks](https://img.shields.io/badge/Forks-0-green?style=for-the-badge&logo=github)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/network/members)
 [![Downloads latest release](https://img.shields.io/badge/Downloads_latest_release-0-brightgreen?style=for-the-badge)](https://github.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/releases/latest)
@@ -26,31 +16,14 @@
 
 <!-- STATS_END -->
 
-
-
-
-
-
-
-
-
 <!-- GRAPH_START -->
 <p align="center">
   <img src="./traffic-views.png" width="100%" alt="GitHub Traffic">
 </p>
 <!-- GRAPH_END -->
 
-
-
-
-
-
-
-
-
-
 <!-- ISSUES_START -->
-<!-- auto-updated by GitHub Actions · 2026-07-10 15:44 UTC -->
+<!-- auto-updated by GitHub Actions · 2026-09-02 19:18 UTC -->
 
 ## Issues
 
@@ -82,9 +55,6 @@
 
 <!-- ISSUES_END -->
 
-
-
-
 ## Bitmain APW7 Voltage Mod
 
 ![APW7 board](https://raw.githubusercontent.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/main/Full.jpg)
@@ -93,31 +63,24 @@
 
 ---
 
-- [English](#english)
-- [Русский](#русский)
-
----
-
-## English
-
-## #Hardware
+## # Equipment
 
 - PSU: Bitmain APW7
-- Revision: 4-MOSFET secondary rectifier version
+- Revision: 4 MOSFETs (secondary rectifier)
 - Controller: FAN7688 (SOP-16)
-- Pin 4: FB (feedback input)
+- Leg 4: FB (feedback input)
 
-> This applies ONLY to the 4-MOSFET version shown in the photo.
-
----
-
-## #Purpose
-
-Increase output voltage from **~12.3 V up to ~14.0 V**.
+> Applicable ONLY to the 4 MOSFET version shown in the photo.
 
 ---
 
-## #Original Feedback Divider
+## # Purpose
+
+Increasing the output voltage from **~12.3 V to ~14.0 V**.
+
+---
+
+## # Standard feedback divider
 
 ```
 +12V
@@ -134,35 +97,36 @@ Measured: **~12.3 V**
 
 ---
 
-## #Formula
+## # Formula
 
 Vout = Vref × (1 + R86 / R87)
 
-Real measured:
+Actually measured:
 Vref ≈ 2.412 V
 
 ---
 
-## # Calculated Values
+## # Estimated values
 ```
-| R86   | Output  |
-| 8.2k  | ~12.3 V |
-| 9.1k  | ~13.4 V |
-| 9.31k | ~13.6 V |
-| 9.53k | ~13.9 V |
-| 9.6k  | ~14.0 V |
+| R86   | Выход   |
+| 8.2k  | ~12.3 В |
+| 9.1k  | ~13.4 В |
+| 9.31k | ~13.6 В |
+| 9.53k | ~13.9 В |
+| 9.6k  | ~14.0 В |
 ```
+
 ---
 
-## #Voltage Limits
+## # Voltage limits
 
 - Minimum: **12.3 V**
 - Maximum stable: **13.9–14.0 V**
-- Above → **OVP protection (shutdown)**
+- Above → **OVP protection is triggered (shutdown)**
 
 ---
 
-## #Fixed Resistor Mod
+## # Fixed resistor mod
 
 Replace:
 
@@ -171,148 +135,55 @@ R86: 8.2k → 9.1k – 9.6k
 Recommended:
 
 - 9.1k → safe
-- 9.53k → near max
-- 9.6k → maximum practical
+- 9.53k → close to maximum
+- 9.6k → practical maximum
 
 ---
 
-## Adjustable Mod (Trimmer)
-
-## # Wiring
-
-![Wiring](wiring.jpg)
-
-- Red — +12V
--Yellow—GND
-- Blue - FB (pin 4 FAN7688)
-
----
-
-## # Implementation
-
-R86 = 8.2k + 2k trimmer
-
----
-
-## # Real Behavior (important)- Deccreasing resistance → **no effect (~12.3 V stays)**
-- Increasing resistance:
-  - voltage rises normally
-  - stable up to **13.9–14.0 V**
-- Above → **PSU enters protection**
-
----
-
-## # Practical Range
-```
-| Total R86.    | Output |
-| 8.2k          | 12.3 V |
-| 9.1k     | 13.3–13.4 V |
-| 9.5–9.6k | 13.9–14.0 V |
-| >9.7k     | Protection |
-```
----
-
-## # Important Notes
-
-- Regulation works **only upward**
-- Hard OVP threshold (~14 V)
-- Adjust voltage under load
-- Output capacitors are often **16V rated**
-- Higher voltage increases stress on:
-  - rectifiers
-  -capacitors
-  - transformer secondary
-
----
-
-## Russian
-
-## # Equipment
-
-- PSU: Bitmain APW7
-- Revision: 4 MOSFETs
-- Controller: FAN7688
-- 4 legs - FB
-
----
-
-## # Purpose
-
-Increasing voltage from **~12.3 V to ~14.0 V**
-
----
-
-## # Regular divider
-
-```
-+12V
-  |
- R86 = 8.2k
-  |
-  +-----> FB (pin 4)
-  |
- R87 = 2.0k
-  |
- GND
-```
-
-Output: **~12.3 V**
-
----
-
-## # Formula
-
-Vout = Vref × (1 + R86 / R87)
-
-Vref ≈ 2.412 V
-
----
-
-## # Calculation
-```
-| R86   | Напряжение |
-| 8.2k  | ~12.3 В    |
-| 9.1k  | ~13.4 В.   |
-| 9.53k | ~13.9 В    |
-| 9.6k  | ~14.0 В    |
-```
----
-
-## # Limits
-
-- Minimum: 12.3 V
-- Maximum: 13.9–14.0 V
-- Next → protection
-
----
-
-## Adjustable option
+## Adjustable option (trimmer resistor)
 
 ## # Connection
 
 ![Подключение](wiring.jpg)
 
-- Red - 12V
+- Red - +12V
 - Yellow - GND
-- Blue – FB
+- Blue - FB (leg 4 FAN7688)
 
 ---
 
 ## # Implementation
 
-8.2k + 2k variable resistor
+R86 = 8.2k + trim resistor 2k
 
 ---
 
-## # Behavior
-
-- Down is not adjustable
-- Up to 13.9–14.0 V
-- Further protection
+## # Actual behavior (important)- Reducing resistance → **no effect (~12.3 V remains)**
+- Increased resistance:
+  - voltage increases normally
+  - stable up to **13.9–14.0 V**
+- Higher → **BP goes into defense**
 
 ---
 
-## # Conclusion
+## # Practical range
+```
+| Общее R86 | Выход       |
+| 8.2k      | 12.3 В      |
+| 9.1k      | 13.3–13.4 В |
+| 9.5–9.6k  | 13.9–14.0 В |
+| >9.7k     | Защита      |
+```
 
-- Adjustment only up- Hard protection threshold
-- Operating maximum ≈ 14 V
+---
+
+## # Important Notes
+
+- Adjustment works **up only**
+- Hard OVP threshold (~14 V)
+- Adjust voltage under load
+- Output capacitors are often rated at **16V**
+- Higher voltage increases the load on:
+  - rectifiers
+  - capacitors
+  - secondary winding of the transformer
