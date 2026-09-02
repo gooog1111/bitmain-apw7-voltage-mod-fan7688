@@ -2,16 +2,6 @@
 🇬🇧 [English version](README.en.md)
 <!-- LANG_END -->
 
-<div align="center">
-
-<img src="resources/header.svg" alt="Bitmain APW7 Voltage Mod" width="900"/>
-
-</div>
-
-
-
-
-
 <!-- STATS_START -->
 <!-- auto-updated by GitHub Actions · 2026-07-10 15:44 UTC -->
 
@@ -26,28 +16,11 @@
 
 <!-- STATS_END -->
 
-
-
-
-
-
-
-
-
 <!-- GRAPH_START -->
 <p align="center">
   <img src="./traffic-views.png" width="100%" alt="GitHub Traffic">
 </p>
 <!-- GRAPH_END -->
-
-
-
-
-
-
-
-
-
 
 <!-- ISSUES_START -->
 <!-- auto-updated by GitHub Actions · 2026-07-10 15:44 UTC -->
@@ -82,9 +55,6 @@
 
 <!-- ISSUES_END -->
 
-
-
-
 ## Bitmain APW7 Voltage Mod
 
 ![APW7 board](https://raw.githubusercontent.com/gooog1111/bitmain-apw7-voltage-mod-fan7688/main/Full.jpg)
@@ -93,158 +63,24 @@
 
 ---
 
-- [English](#english)
-- [Русский](#русский)
-
----
-
-## English
-
-### Hardware
-
-- PSU: Bitmain APW7
-- Revision: 4-MOSFET secondary rectifier version
-- Controller: FAN7688 (SOP-16)
-- Pin 4: FB (feedback input)
-
-> This applies ONLY to the 4-MOSFET version shown in the photo.
-
----
-
-### Purpose
-
-Increase output voltage from **~12.3 V up to ~14.0 V**.
-
----
-
-### Original Feedback Divider
-
-```
-+12V
-  |
- R86 = 8.2k
-  |
-  +-----> FB (pin 4)
-  |
- R87 = 2.0k
-  |
- GND
-```
-Measured: **~12.3 V**
-
----
-
-### Formula
-
-Vout = Vref × (1 + R86 / R87)
-
-Real measured:
-Vref ≈ 2.412 V
-
----
-
-### Calculated Values
-```
-| R86   | Output  |
-| 8.2k  | ~12.3 V |
-| 9.1k  | ~13.4 V |
-| 9.31k | ~13.6 V |
-| 9.53k | ~13.9 V |
-| 9.6k  | ~14.0 V |
-```
----
-
-### Voltage Limits
-
-- Minimum: **12.3 V**
-- Maximum stable: **13.9–14.0 V**
-- Above → **OVP protection (shutdown)**
-
----
-
-### Fixed Resistor Mod
-
-Replace:
-
-R86: 8.2k → 9.1k – 9.6k
-
-Recommended:
-
-- 9.1k → safe
-- 9.53k → near max
-- 9.6k → maximum practical
-
----
-
-## Adjustable Mod (Trimmer)
-
-### Wiring
-
-![Wiring](wiring.jpg)
-
-- Red — +12V
-- Yellow — GND
-- Blue — FB (pin 4 FAN7688)
-
----
-
-### Implementation
-
-R86 = 8.2k + 2k trimmer
-
----
-
-### Real Behavior (important)
-
-- Decreasing resistance → **no effect (~12.3 V stays)**
-- Increasing resistance:
-  - voltage rises normally
-  - stable up to **13.9–14.0 V**
-- Above → **PSU enters protection**
-
----
-
-### Practical Range
-```
-| Total R86.    | Output |
-| 8.2k          | 12.3 V |
-| 9.1k     | 13.3–13.4 V |
-| 9.5–9.6k | 13.9–14.0 V |
-| >9.7k     | Protection |
-```
----
-
-### Important Notes
-
-- Regulation works **only upward**
-- Hard OVP threshold (~14 V)
-- Adjust voltage under load
-- Output capacitors are often **16V rated**
-- Higher voltage increases stress on:
-  - rectifiers
-  - capacitors
-  - transformer secondary
-
----
-
-## Русский
-
 ### Оборудование
 
 - БП: Bitmain APW7
-- Ревизия: 4 MOSFET
-- Контроллер: FAN7688
-- 4 ножка — FB
+- Ревизия: 4 MOSFET (вторичный выпрямитель)
+- Контроллер: FAN7688 (SOP-16)
+- Нога 4: FB (вход обратной связи)
+
+> Применимо ТОЛЬКО к версии с 4 MOSFET, показанной на фото.
 
 ---
 
 ### Назначение
 
-Повышение напряжения с **~12.3 В до ~14.0 В**
+Повышение выходного напряжения с **~12.3 В до ~14.0 В**.
 
 ---
 
-### Штатный делитель
+### Штатный делитель обратной связи
 
 ```
 +12V
@@ -257,8 +93,7 @@ R86 = 8.2k + 2k trimmer
   |
  GND
 ```
-
-Выход: **~12.3 В**
+Измерено: **~12.3 В**
 
 ---
 
@@ -266,56 +101,91 @@ R86 = 8.2k + 2k trimmer
 
 Vout = Vref × (1 + R86 / R87)
 
+Измерено фактически:
 Vref ≈ 2.412 В
 
 ---
 
-### Расчёт
+### Расчётные значения
 ```
-| R86   | Напряжение |
-| 8.2k  | ~12.3 В    |
-| 9.1k  | ~13.4 В.   |
-| 9.53k | ~13.9 В    |
-| 9.6k  | ~14.0 В    |
+| R86   | Выход   |
+| 8.2k  | ~12.3 В |
+| 9.1k  | ~13.4 В |
+| 9.31k | ~13.6 В |
+| 9.53k | ~13.9 В |
+| 9.6k  | ~14.0 В |
 ```
----
-
-### Пределы
-
-- Минимум: 12.3 В
-- Максимум: 13.9–14.0 В
-- Дальше → защита
 
 ---
 
-## Регулируемый вариант
+### Пределы напряжения
+
+- Минимум: **12.3 В**
+- Максимум стабильно: **13.9–14.0 В**
+- Выше → **срабатывает защита OVP (отключение)**
+
+---
+
+### Мод фиксированным резистором
+
+Замените:
+
+R86: 8.2k → 9.1k – 9.6k
+
+Рекомендуется:
+
+- 9.1k → безопасно
+- 9.53k → близко к максимуму
+- 9.6k → практический максимум
+
+---
+
+## Регулируемый вариант (подстроечный резистор)
 
 ### Подключение
 
 ![Подключение](wiring.jpg)
 
-- Красный — 12V
+- Красный — +12V
 - Жёлтый — GND
-- Синий — FB
+- Синий — FB (нога 4 FAN7688)
 
 ---
 
 ### Реализация
 
-8.2k + переменный резистор 2k
+R86 = 8.2k + подстроечный резистор 2k
 
 ---
 
-### Поведение
+### Реальное поведение (важно)
 
-- Вниз не регулируется
-- Вверх до 13.9–14.0 В
-- Дальше защита
+- Уменьшение сопротивления → **эффекта нет (~12.3 В остаётся)**
+- Увеличение сопротивления:
+  - напряжение растёт нормально
+  - стабильно до **13.9–14.0 В**
+- Выше → **БП уходит в защиту**
 
 ---
 
-### Вывод
+### Практический диапазон
+```
+| Общее R86 | Выход       |
+| 8.2k      | 12.3 В      |
+| 9.1k      | 13.3–13.4 В |
+| 9.5–9.6k  | 13.9–14.0 В |
+| >9.7k     | Защита      |
+```
 
-- Регулировка только вверх
-- Жёсткий порог защиты
-- Рабочий максимум ≈ 14 В
+---
+
+### Важные замечания
+
+- Регулировка работает **только вверх**
+- Жёсткий порог OVP (~14 В)
+- Настраивайте напряжение под нагрузкой
+- Выходные конденсаторы часто рассчитаны на **16В**
+- Более высокое напряжение увеличивает нагрузку на:
+  - выпрямители
+  - конденсаторы
+  - вторичную обмотку трансформатора
